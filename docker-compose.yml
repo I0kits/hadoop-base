@@ -1,5 +1,8 @@
 version: '3'
 services:
+  single:
+    image: 'cloudera/quickstart:latest'
+
   node1: &node
     image: 'sickp/alpine-sshd:latest'
     volumes:
@@ -10,7 +13,7 @@ services:
     <<: *node
   node4:
     <<: *node
-  master:
+  cluster:
     <<: *node
     links:
       - node1
