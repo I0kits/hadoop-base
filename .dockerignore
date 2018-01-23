@@ -1,0 +1,4 @@
+src/
+README.md
+.dockerignore
+docker-compose.yml

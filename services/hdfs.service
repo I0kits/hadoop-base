@@ -1,0 +1,13 @@
+[Unit]
+Description=HDFS start/stop
+
+[Service]
+User=root
+Group=root
+Type=oneshot
+ExecStart=/etc/hadoop/hdfs.sh start
+ExecStop=/etc/hadoop/hdfs.sh stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=YARN start/stop
+
+[Service]
+User=root
+Group=root
+Type=oneshot
+ExecStart=/etc/hadoop/yarn.sh start
+ExecStop=/etc/hadoop/yarn.sh stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
