@@ -27,8 +27,8 @@ RUN mkdir -p \
     /var/hadoop/hdfs/namenode \
     /var/hadoop/hdfs/datanode
 
-COPY scripts/ /etc/hadoop/
 COPY config/ /etc/hadoop/
+COPY scripts/ /etc/hadoop/
 COPY services/ /etc/systemd/system/
 
 RUN systemctl enable hdfs.service

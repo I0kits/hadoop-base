@@ -2,6 +2,7 @@ version: '3'
 services:
   hadoop:
     build: .
+    # image: wangwii/hadoop-base:latest
     privileged: true
     ports:
       - "2222:22"
